@@ -1,4 +1,4 @@
-# Interfaces Inmteligentes - Práctica 3 : Físicas  
+# Interfaces Inteligentes - Práctica 03 : Físicas  
 
 - Autor: Thomas Edward Bradley  
 - Fecha: 10/10/23  
@@ -18,11 +18,11 @@ Creé 'moveVector.cs' y se lo aplique al cubo, dentro de esta tenemos un float p
 la velocidad) y un Vector3 público moveDirection (que determina la dirección). Una vez hecho esto solo hay que  
 pasar estos a un transform.Translate dentro del método Update(), multiplicandose junto con Time.DeltaTime (también  
 se le pasa la especificacioón de Space). Los resultados de las pruebas son:  
-- Duplicar coordenadas de dirección: 
-- Duplicar velocidad: 
-- Velocidad menor que 1: 
-- Cubo con y>0: 
-- Intercambiar movimiento relativo local y global: 
+- <u>Duplicar coordenadas de dirección</u> -> El cubo se mueve el doble de rapido
+- <u>Duplicar velocidad</u> -> Ocurre lo mismo que en el caso anterior
+- <u>Velocidad menor que 1</u> -> Se mueve más lento que si hubiesemos introducido solo la dirección
+- <u>Cubo con y>0</u> -> Si movemos solo las coordenadas X/Z con la dirección, el cubo se mantendra flotando en el aire
+- <u>Intercambiar movimiento relativo local y global</u> -> Si roto el cubo, con Space.Self sale volando respecto a donde la dirección y donde mira (no solo la primera)
 ## Tarea 04 
 Creé dos scripts: 'controlCube.cs' y 'controlSphere.cs'. Para la segunda de estas tuve un float público  
 'speed' que indica la velocidad de movimiento. Tras esto compruebo (mediante Input.GetKey) si se esta  
@@ -69,8 +69,8 @@ Para la última tarea, creé un nuevo cilindro, le puse el mismo tamaño en la e
 Tras esto le agregue es script 'controlCylinder.cs' que fue igual que 'controlCube.cs' perso cambiando las teclas de flechas por I|K y J|L. Para que esto  
 funcione correctamente, hay que ir al Input Manager y agregar I|K como teclas alternativas para el movimiento vertical y J|L como alternativas para el horizontal.  
 También le agregue el componente rigidbody. Los resultados de las pruebas fueron los siguientes:  
-- Esfera con x10 masa: 
-- Cilindro con x10 masa: 
-- Cilindro cinematico: 
-- Cilindro como trigger: 
-- Cilindro con fricción duplicada: 
+- <u>Esfera con x10 masa</u> -> Es mucho más dificil mantener la esfera recta, para poder moverla
+- <u>Cilindro con x10 masa</u> -> El cilindro se muevo más lentamente
+- <u>Cilindro cinematico</u> -> El cilindro ya no colisiona con el cubo, el cual también es cinematico
+- <u>Cilindro como trigger</u> -> El cilindro cae fuera del mundo
+- <u>Cilindro con fricción duplicada</u> ->  No note dinguna diferencia distinguible

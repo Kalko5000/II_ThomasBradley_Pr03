@@ -19,6 +19,6 @@ public class detectCollision : MonoBehaviour
     //Detect collisions between the GameObjects with Colliders attached
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collided with " + other.gameObject.name);
+        Debug.Log("Collided with " + other.gameObject.tag);
     }
 }
